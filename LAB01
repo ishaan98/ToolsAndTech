@@ -32,6 +32,10 @@ types :
 
 	--> Inner classes 
 	--> Static classes 
+
+The member function of the outer class is capable to create object of the inner class.
+
+
 	
  
 
