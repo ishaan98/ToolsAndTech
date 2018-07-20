@@ -35,7 +35,8 @@ types :
 
 The member function of the outer class is capable to create object of the inner class.
 
-
+If the inner class is static, its possible to create the object of the inner class outside as : 
+	outerclassname.innerclassname objectname  =  new outerclassname.innerclassname(); 	
 	
  
 

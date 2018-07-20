@@ -6,7 +6,7 @@ class Game{
 		System.out.println("playing football");
 	}
 	
-	private class Play{
+	class Play{
 	
 		void display(){
 			System.out.println("Mobile Game");
@@ -27,6 +27,8 @@ class Cricket{
 		Game g = new Game();
 		g.show();
 		g.showGame();
+		Game.Play p = g.new Play();
+		p.display();
 	}
 
 }
