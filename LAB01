@@ -1,0 +1,37 @@
+
+concrete methods and abstract methods
+
+Interface
+
+implements and extends
+
+class A{
+	public void func(int a){
+		print(a)
+	}
+}
+
+class B extends A{
+	public void func(double a){
+		print(a new)
+	}
+}
+
+class MyClass{
+	public static void main(String args[]){
+		B obj = new B(); 
+		obj.func(1); // func of class A is called 
+		obj.func(1.2); // func of class B is called
+	}
+}
+
+
+In an surface, a normal class cannot be declared as private or protected, if the programmer is 
+interested to use it, it must define nested class. Again the nested class is divided into two
+types :
+
+	--> Inner classes 
+	--> Static classes 
+	
+ 
+
