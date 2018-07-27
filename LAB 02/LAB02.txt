@@ -1,0 +1,96 @@
+A ob = new A();
+ob.display();
+
+ --------
+ 
+new A().display();    <-------   Anonymous object
+
+Anonymous class can be created inside a class(inner class).
+
+----------------------------
+Example : 
+
+interface Product{
+	String p_name = "Split AC";
+	int price  = 42000;
+	void details();
+}
+
+class MyClass1 implement Product{
+	
+	void  details(){
+		System.out.println("Product name: "+p_name);
+		System.out.println("Price: "+price);	
+	}
+	
+}
+
+
+class Demo{
+
+	public static void main(String args[]){
+		MyClass1 ob = new MyClass1();
+		ob.details();
+	}
+
+}
+
+----------------------------
+Example:
+
+interface product{
+	String p_name = "Split AC";
+	int price  = 42000;
+	void details();
+}
+
+class MyClass1 implement product{
+	
+	/*
+	public, because methods in interface are by default public 
+	and methods in class are by default 'default' type.
+	Hence we need to declare public while overriding methods.
+	*/
+	
+	public void details(){
+		System.out.println("Product name: "+p_name);
+		System.out.println("Price: "+price);	
+	}
+	
+}
+
+
+class Demo{
+
+	public static void main(String args[]){
+		Product ob = new MyClass1();
+		ob.details();
+	}
+
+}
+-----------------------------
+Another Anonymous class example (inner class):
+
+class Demo2{
+
+	public static void main(String args[]){
+		Product ob = new Product(){
+			
+			/*
+			public because methods in interface are by default public 
+			and methods in class are by default 'default' type.
+			Hence we need to declare public while overriding methods.
+			*/
+			
+			public void details(){
+				System.out.println("Product name: "+p_name);
+				System.out.println("Price: "+price);	
+			}
+		
+		};
+		ob.details();
+	}	
+
+}
+--------------------------------
+
