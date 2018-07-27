@@ -93,4 +93,70 @@ class Demo2{
 
 }
 --------------------------------
+Reflection:
+
+Reflects the properties of one class to another
+
+3 ways:
+	
+	1. Class.forName();
+		--> not suitable for primitive datatypes
+		
+		-------------------------
+		
+		import java.lang.reflect.*;
+		
+		class MyClass2{
+		}
+		
+		class Demo2{
+
+			public static void main(String args[]) throws ClassNotFoundException{
+			Class c = Class.forName("MyClass2"); // creating instance of class 'Class'
+			System.out.println(c.getName());
+			}
+			
+		}
+		------------------------
+		
+	2. getClass();
+		
+		------------------------
+		 class MyClass3{}
+		 
+		 class Demo3{
+		 
+		 	void printName(Object ob){
+		 		Class c = ob.getClass();
+		 		System.out.println(c.getName());	
+		 	}		 
+		 }
+		 
+		 class Test{
+		 
+		 	public static void main(String args[]) throws ClassNotFoundException{
+				MyClass2 ob1 = new MyClass2();
+				Demo3 ob2 = new Demo3();
+				ob2.printName(ob1);
+			}
+		 
+		 }
+		 -------------------------
+		 
+	 3. .class;
+	 
+	 	import java.lang.reflect.*;
+
+        class Demo4{
+	 
+	 		public static void main(String args[]) throws ClassNotFoundException{
+				Class c1 = Boolean.class;
+				System.out.println(c1.getName());
+				Class c2 = Integer.class;
+				System.out.println(c2.getName());	
+				Class c3 = Demo4.class;
+				System.out.println(c3.getName());	
+		 	}	 
+		 }
+
 
