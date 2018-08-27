@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".one">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/chooser_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Choose Branch"
+            android:textSize="30dp"
+            android:layout_marginBottom="10dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/radiogp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/chooser_text">
+
+            <RadioButton
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="CS/IT"
+                android:textSize="20dp"
+                android:id="@+id/cs_it"
+                android:layout_marginBottom="5dp"/>
+
+            <RadioButton
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="ETC"
+                android:textSize="20dp"
+                android:id="@+id/etc"
+                android:layout_marginBottom="5dp"/>
+
+            <RadioButton
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Mech"
+                android:textSize="20dp"
+                android:id="@+id/mech"
+                android:layout_marginBottom="5dp"/>
+
+            <RadioButton
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Civil"
+                android:textSize="20dp"
+                android:id="@+id/civil"
+                android:layout_marginBottom="5dp"/>
+
+        </RadioGroup>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="show"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:id="@+id/btn"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
