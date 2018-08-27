@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ques_three">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Enter number 1"
+        android:layout_marginLeft="18dp"
+        android:id="@+id/num1"
+        android:inputType="numberDecimal"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:hint="Enter number 2"
+        android:layout_marginLeft="18dp"
+        android:inputType="numberDecimal"
+        android:id="@+id/num2"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/num2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-80dp"
+        android:layout_marginEnd="42dp"
+        android:text="The answer appears here"
+        android:textSize="15dp"
+        android:id="@+id/ans"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/num2"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/num1"
+            android:onClick="addFunc"
+            android:text="ADD"
+            android:id="@+id/add"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="subFunc"
+            android:text="SUB"
+            android:layout_toRightOf="@+id/add"
+            android:id="@+id/sub"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mulFunc"
+            android:text="MUL"
+            android:layout_toRightOf="@+id/sub"
+            android:id="@+id/mul"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="divFunc"
+            android:text="DIV"
+            android:layout_toRightOf="@+id/mul" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
